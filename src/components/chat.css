@@ -8,7 +8,7 @@
 }
 
 :root{
-    -mainColor: #3390ec;
+    --mainColor: #3390ec;
     --whiteColor: #ffffff;
     --blackColor: #000000;
     --borderColor: #dfe1e5;
@@ -123,4 +123,22 @@ a{
     color: var(--grayColor);
 }
 
+.right-side .header.focus .search-box{
+    border: .2rem solid var(--mainColor);
+}
+
+.right-side .header.focus .search-box i{
+    color: var(--mainColor);
+}
+
+.right-side .header.focus .toggle-button .fa-bars{
+    transform: rotate(180deg);
+    opacity: 0;
+}
+
+.right-side .header.focus .toggle-button .fa-arrow-left{
+    transform: rotate(360deg);
+    visibility: visible;
+    opacity: 1;
+}
 /* Aside section end */
