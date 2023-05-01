@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
 
+
 *{
     margin: 0;
     padding: 0;
@@ -36,6 +37,8 @@ a{
 }
 
 .chat{
+    padding-top: 0%;
+    margin-top: 0%;
     position: relative;
     width: 100%;
 }
@@ -141,4 +144,34 @@ a{
     visibility: visible;
     opacity: 1;
 }
+
+
+.right-side .body-container{
+    position: fixed;
+    top: 7rem;
+    bottom: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 0 .5rem;
+}
+
+.right-side .body-container .chat-list{}
+
+.right-side .body-container .chat-list .chat-box{}
+
+.right-side .chat-list .chat-box .chat-img{}
+
+.right-side .chat-list .chat-box .chat-img img{}
+
+.right-side .chat-list .chat-box .chat-details{}
+
+.right-side .chat-list .chat-box .chat-details .chat-title{}
+
+.right-side .chat-box .chat-details .chat-title h3{}
+
+.right-side .chat-box .chat-details .chat-title span{}
+
+.right-side .chat-box .chat-details .chat-msg{}
+
+.right-side .chat-box .chat-details .chat-msg span{}
 /* Aside section end */

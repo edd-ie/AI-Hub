@@ -1,5 +1,6 @@
 import './chat.css'
 import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 
 
 export default function Chat(){
@@ -67,12 +68,76 @@ export default function Chat(){
                     <div className="chat-list">
                         <div className="chat-box" id="Msg">
                             <div className="chat-img">
-                                <img src="../../public/images/icon1.jpg" alt=""/>
+                                <img src="../../public/images/dicaprio.jpg" alt="show"/>
                             </div>
                             <div className="chat-details">
-                                <h3>AI chat</h3>
-                                <span>{time}</span>
+                                <div className='chat-title'>
+                                    <h3>AI chat</h3>
+                                    <span>{time}</span>
+                                </div>
                             </div>
+                            <div className="chat-">
+                                <p>Hey what's up?</p>
+                            </div>
+                        </div>
+                        <div className="chat-box">
+                            <div className="chat-img">
+                                <img src="../../public/images/dicaprio.jpg" alt="show"/>
+                            </div>
+                            <div className="chat-details">
+                              div  <div className='chat-title'>
+                                    <h3>Eddie</h3>
+                                    <span>12:69 AM</span>
+                                </div>
+                            </div>
+                            <div className="chat-">
+                                <p>Chats have be leaked get in the group</p>
+                            </div>
+                        </div>
+                        <div className="chat-box">
+                            <div className="chat-img">
+                                <img src="../../public/images/dicaprio.jpg" alt="show"/>
+                            </div>
+                            <div className="chat-details">
+                                <div className='chat-title'>
+                                    <h3>Laura</h3>
+                                    <span>42:00 PM</span>
+                                </div>
+                            </div>
+                            <div className="chat-">
+                                <p>Who did it... was it you?</p>
+                            </div>
+                        </div>
+                        <div className="chat-box">
+                            <div className="chat-img">
+                                <img src="../../public/images/dicaprio.jpg" alt="show"/>
+                            </div>
+                            <div className="chat-details">
+                                <div className='chat-title'>
+                                    <h3>Daniel</h3>
+                                    <span>11:11 PM</span>
+                                </div>
+                            </div>
+                            <div className="chat-">
+                                <p>Clear the hardDrives!!!!</p>
+                            </div>
+                        </div>
+                        <div className="chat-box">
+                            <div className="chat-img">
+                                <img src="../../public/images/dicaprio.jpg" alt="show"/>
+                            </div>
+                            <div className="chat-details">
+                                <div className='chat-title'>
+                                    <h3>G7-groupChat</h3>
+                                    <span>11:11 PM</span>
+                                </div>
+                            </div>
+                            <div className="chat-title">
+                                <p>This is not a drill</p>
+                            </div>
+                            <button>
+                                <Link to="/">Home</Link>
+                            </button>
                         </div>
                     </div>
                 </div>
