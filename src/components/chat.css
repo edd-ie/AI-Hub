@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    -mainColor: #3390ec;
+    --whiteColor: #ffffff;
+    --blackColor: #000000;
+    --borderColor: #dfe1e5;
+    --greenColor: #0ac630;
+    -unreadMessage: #c4c9cc;
+    --grayColor: #707579;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-weight: 400;
+    overflow: hidden;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.chat{
+    position: relative;
+    width: 100%;
+}
+
+/* Aside section start */
+
+.right-side{
+    position: relative;
+    max-width: 42rem;
+    min-width:41rem;
+    min-height: 100vh;
+    background-color: var(--whiteColor);
+    border-right: .1rem solid var(--borderColor);
+    box-shadow: 0 .1rem .1rem .1rem rgba(0 0 0 / .05);
+}
+
+.right-side .header-container{
+    padding: 1rem;
+    min-height:3.5rem;
+    background-color: var(--whiteColor);
+}
+
+.right-side .header-container .header{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.right-side .header .toggle-button{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: all .3s ease;
+}
+
+.right-side .header .toggle-button:hover{
+    background-color: #f5f5f5;
+}
+
+.right-side .header .toggle-button i{
+    position: absolute;
+    font-size: 1.8rem;
+    transition: all .3s ease-in-out;
+}
+
+.right-side .header .toggle-button .fa-arrow-left{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.right-side .header .search-box{
+    position: relative;
+    border: .1rem solid var(--borderColor);
+    border-radius: 2.2rem;
+    width: 100%;
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all .3s ease-in-out;
+}
+
+.right-side .header .search-box i{
+    font-size: 1.6rem;
+    color: var(--grayColor);
+    opacity: .6;
+}
+
+.right-side .header .search-box input{
+    position: relative;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.right-side .header .search-box input::placeholder{
+    font-size: 1.6rem;
+    font-weight: 400;
+    opacity: .6;
+    color: var(--grayColor);
+}
+
+/* Aside section end */
