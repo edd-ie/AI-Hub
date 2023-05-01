@@ -68,7 +68,7 @@ export default function Chat(){
                     <div className="chat-list">
                         <div className="chat-box" id="Msg">
                             <div className="chat-img">
-                                <img src="../../public/images/dicaprio.jpg" alt="show"/>
+                                <img src={require("../images/icon.jpg")} alt="show"/>
                             </div>
                             <div className="chat-details">
                                 <div className='chat-title'>
@@ -82,10 +82,10 @@ export default function Chat(){
                         </div>
                         <div className="chat-box">
                             <div className="chat-img">
-                                <img src="../../public/images/dicaprio.jpg" alt="show"/>
+                                <img src={require("../images/icon.jpg")} alt="show"/>
                             </div>
                             <div className="chat-details">
-                              div  <div className='chat-title'>
+                                <div className='chat-title'>
                                     <h3>Eddie</h3>
                                     <span>12:69 AM</span>
                                 </div>
@@ -96,7 +96,7 @@ export default function Chat(){
                         </div>
                         <div className="chat-box">
                             <div className="chat-img">
-                                <img src="../../public/images/dicaprio.jpg" alt="show"/>
+                                <img src={require("../images/icon.jpg")} alt="show"/>
                             </div>
                             <div className="chat-details">
                                 <div className='chat-title'>
@@ -110,7 +110,7 @@ export default function Chat(){
                         </div>
                         <div className="chat-box">
                             <div className="chat-img">
-                                <img src="../../public/images/dicaprio.jpg" alt="show"/>
+                                <img src={require("../images/icon.jpg")} alt="show"/>
                             </div>
                             <div className="chat-details">
                                 <div className='chat-title'>
@@ -124,7 +124,7 @@ export default function Chat(){
                         </div>
                         <div className="chat-box">
                             <div className="chat-img">
-                                <img src="../../public/images/dicaprio.jpg" alt="show"/>
+                                <img src={require("../images/icon.jpg")} alt="show"/>
                             </div>
                             <div className="chat-details">
                                 <div className='chat-title'>
