@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap');
 
 
 *{
@@ -155,23 +155,183 @@ a{
     padding: 0 .5rem;
 }
 
-.right-side .body-container .chat-list{}
+.right-side .body-container .chat-list{
+    display: flex;
+    flex-direction: column;
+    padding-top: 6px;
+}
 
-.right-side .body-container .chat-list .chat-box{}
+.right-side .body-container .chat-list .chat-box{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    min-height: 7rem;
+    cursor: pointer;
+    transition: all .3s ease;
+}
 
-.right-side .chat-list .chat-box .chat-img{}
+.right-side .chat-list .chat-box .chat-img{
+    width: 5.4rem;
+    height: 5.4rem;
+    flex-basis: 15%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
 
-.right-side .chat-list .chat-box .chat-img img{}
+.right-side .chat-list .chat-box .chat-img img{
+    border-radius: 50%;
+    max-width: 100%;
+    object-fit: cover;
+}
 
-.right-side .chat-list .chat-box .chat-details{}
+.right-side .chat-list .chat-box .chat-details{
+    flex-basis: 85%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
 
-.right-side .chat-list .chat-box .chat-details .chat-title{}
+.right-side .chat-list .chat-box .chat-details .chat-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-.right-side .chat-box .chat-details .chat-title h3{}
+.right-side .chat-box .chat-details .chat-title h3{
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
 
-.right-side .chat-box .chat-details .chat-title span{}
+.right-side .chat-box .chat-details .chat-title span{
+    color: var(--grayColor);
+    font-size: 1.2rem;
+}
 
-.right-side .chat-box .chat-details .chat-msg{}
+.right-side .chat-box .chat-details .chat-msg{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-.right-side .chat-box .chat-details .chat-msg span{}
+.right-side .chat-box .chat-details .chat-msg p{
+    font-size: 1.6rem;
+    color: var(--grayColor);
+}
+
+.right-side .chat-box .chat-details .chat-msg span{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    color: var(--whiteColor);
+    background-color: var(--greenColor);
+    font-size: 1.3rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -1rem;
+}
+
+.right-side .body-container .chat-list .chat-box:hover{
+    background-color: hsla(207, 4%, 46%, .08);
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar {
+    width: .5rem; 
+}
+
+::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 1rem;
+    background-color: var(--borderColor);
+}
+
+.right-side .files{
+    position: relative;
+    margin-top: 0;
+    min-width: 40rem;
+    max-width: 42rem;
+    height: 91.1vh;
+    background-color: var(--whiteColor);
+    z-index: 1;
+    transition: all .5s ease;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    transition: all .5s ease;
+}
+
+.right-side .files.active{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.right-side .files .menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: .1rem solid var(--borderColor)
+}
+
+.right-side .files .menu li{
+    position: relative;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--grayColor);
+    cursor: pointer;
+}
+
+.right-side .files .menu li.active{
+    color: var(--mainColor);
+}
+
+.right-side .files .menu li.active::before{
+    content: "";
+    position: absolute;
+    width: 4rem;
+    height: 0.2rem;
+    background-color: var(--mainColor);
+    bottom: -1rem;
+    left: 0;
+}
+
+.right-side .files .profiles{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: .1rem solid var(--borderColor);
+}
+
+.right-side .files .profiles li{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.right-side .files .profiles li img{
+    width: 5.4rem;
+    height: 5.4rem;
+    border-radius: 50%;
+}
+
+.right-side .files .profiles li h4{
+    text-transform: capitalize;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--grayColor);
+}
+
 /* Aside section end */
