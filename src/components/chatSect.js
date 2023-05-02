@@ -1,7 +1,83 @@
-import React from "react";
+import React, {useState} from "react";
+
+const API_TOKEN ='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'
+
+// "conversation":{
+//     "generated_responses":["","I think you're asking for a friend. I'm sure he'd appreciate it if we could get him some of your stuff, too! :D DDDP 3R3LLLZY7N5XQ"],
+// "past_user_inputs":["","To be or not to be that is the question?"]}
 
 
 export default function Section(){
+    const[pastChat, setPastChat] = useState([])
+    console.log("file: chatSect.js:12 -> Section -> pastChat:", pastChat.length);
+    const[genChat, setGenChat] = useState([])
+    console.log("file: chatSect.js:14 -> Section -> genChat:", genChat);
+
+    const [chatReply, setChat] = useState([])
+    console.log("file: chatSect.js:17 -> Section -> chatReply:", chatReply);
+
+    function handleClearChat(){
+        setPastChat([])
+        setGenChat([])
+        setGenChat([])
+        let chats = document.getElementsByClassName("chat-container");
+        console.log("file: chatSect.js:24 -> handleClearChat -> chats:", chats[0]);
+
+    }
+
+    function handleChat(e){
+        let input = document.getElementById("chatMsg")
+        let chat = input.value;
+        console.log("file: chatSect.js:9 -> handleChat -> chat:", chat);
+
+        let userData = {
+            inputs: {
+                past_user_inputs: pastChat, 
+                generated_responses: genChat, 
+                text: `${chat}`
+            }
+        }
+
+        fetch("https://api-inference.huggingface.co/models/microsoft/DialoGPT-large",
+            {
+                headers: { Authorization: `Bearer ${API_TOKEN}` },
+                method: "POST",
+                body: JSON.stringify(userData),
+            }
+        )
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            console.log("file: chatSect.js:41 -> handleChat -> data:", data);
+            setPastChat(data.conversation.past_user_inputs);
+            setGenChat(data.conversation.generated_responses);
+            let index = data.conversation.generated_responses.length - 1
+            setChat([...chatReply, {user: `${chat}`, ai: `${data.conversation.generated_responses[index]}`}]);
+        })
+        .catch(error => console.error(error));
+
+        input.value = ""
+    }
+
+    let chatLog = chatReply.map((chat, index) => {
+        console.log("file: chatSect.js:60 -> chatLog -> index:", index);
+        if (chatReply.length == 0) {return 0}
+        return(
+            <>
+                <div className="chat-msg reply" key={'user'+index}>
+                    <p>{chat.user}</p>
+                    <span className="time">06:04 PM</span>
+                </div>
+                <div className="chat-msg" key={'ai'+index}>
+                    <p>{chat.ai}</p>
+                    <span className="time">06:04 PM</span>
+                </div>
+            </>
+        )
+    })
+
+
+
     return(
         <section className="content">
                 <div className="container" id="chatBox">
@@ -36,29 +112,37 @@ export default function Section(){
                             <p>Hey what do you wanna talk about?</p>
                             <span className="time">06:04 PM</span>
                         </div>
+                        {chatLog}
                     </div>
 
                     <div className="message-box">
+                        <div className="micro clear"   onClick={handleClearChat}>
+                            <i className="fas fa-microphone">
+                                <span className="material-symbols-sharp">
+                                    mop
+                                </span>
+                            </i>
+                        </div>
                         <div className="message-content">
                             <i className="far fa-smile">
-                                <span class="material-symbols-sharp">
+                                <span className="material-symbols-sharp">
                                     mood
                                 </span>
                             </i>
-                            <input type="text" placeholder="Message"/>
+                            <input type="text" placeholder="Message" id="chatMsg"/>
                             <i className="fas fa-paperclip">
-                                <span class="material-symbols-sharp">
+                                <span className="material-symbols-sharp">
                                     attach_file
                                 </span>
                             </i>
                         </div>
-                        <div className="micro">
-                            <i classNameName="fas fa-microphone">
-                                <span class="material-symbols-sharp">
+                        <div className="micro" onClick={handleChat}>
+                            <i className="fas fa-microphone">
+                                <span className="material-symbols-sharp">
                                     send
                                 </span>
                             </i>
-                        </div>
+                        </div>                        
                     </div>
                 </div>
             </section>

@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 
 
 export default function Aside(){
-    const [time, setTime] = useState(new Date().toLocaleTimeString());
+    // const [time, setTime] = useState(new Date().toLocaleTimeString());
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-        setTime(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
-        }, 1000);
-        return () => clearInterval(interval);
-    }, []);
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //     setTime(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
+    //     }, 1000);
+    //     return () => clearInterval(interval);
+    // }, []);
  
     function handleBack(){  
         let header = document.querySelector('.header');      
@@ -38,12 +38,12 @@ export default function Aside(){
         files.attributes.class.value += ' active';
     }
 
-    // Update the current time every second
-    let currentTime = setInterval(function() {
-    var date = new Date();
-    var time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
-    console.log(time);
-    }, 1000);
+    // // Update the current time every second
+    // let currentTime = setInterval(function() {
+    // var date = new Date();
+    // var time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+    // console.log(time);
+    // }, 1000);
 
 
     function handleChat(){
@@ -89,7 +89,7 @@ export default function Aside(){
                             <div className="chat-details">
                                 <div className='chat-title'>
                                     <h3>AI chat</h3>
-                                    <span>{time}</span>
+                                    <span>12:11 PM</span>
                                 </div>
                                 <div className="chat-msg">
                                     <p>Hey what's up?</p>
@@ -97,7 +97,7 @@ export default function Aside(){
                                 </div>
                             </div>
                         </div>
-                        <div className="chat-box" id="msg2"  onClick={handleChat}>
+                        <div className="chat-box" id="msg2">
                             <div className="chat-img">
                                 <img src={require("../images/icon.jpg")} alt="show"/>
                             </div>
@@ -112,7 +112,7 @@ export default function Aside(){
                                 </div>
                             </div>
                         </div>
-                        <div className="chat-box" id="msg3" onClick={handleChat}>
+                        <div className="chat-box" id="msg3">
                             <div className="chat-img">
                                 <img src={require("../images/icon.jpg")} alt="show"/>
                             </div>
@@ -127,7 +127,7 @@ export default function Aside(){
                                 </div>
                             </div>
                         </div>
-                        <div className="chat-box" id="msg4" onClick={handleChat}>
+                        <div className="chat-box" id="msg4">
                             <div className="chat-img">
                                 <img src={require("../images/icon.jpg")} alt="show"/>
                             </div>
@@ -142,7 +142,7 @@ export default function Aside(){
                             </div>
                             </div>
                         </div>
-                        <div className="chat-box" id="msg5" onClick={handleChat}>
+                        <div className="chat-box" id="msg5">
                             <div className="chat-img">
                                 <img src={require("../images/icon.jpg")} alt="show"/>
                             </div>
