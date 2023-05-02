@@ -33,7 +33,7 @@ export default function Section(){
                     </div>
                     <div className="chat-container">
                         <div className="chat-msg">
-                            <p>How to make website using html and css?</p>
+                            <p>Hey what do you wanna talk about?</p>
                             <span className="time">06:04 PM</span>
                         </div>
                     </div>
