@@ -122,7 +122,7 @@ export default function Aside(){
                                     <span>42:00 PM</span>
                                 </div>
                                 <div className="chat-msg">
-                                    <p>We have a rat in group</p>
+                                    <p>We have a snitch in the group</p>
                                     <span>1</span>
                                 </div>
                             </div>
