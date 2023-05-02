@@ -49,7 +49,7 @@ a{
 .right-side{
     position: relative;
     max-width: 42rem;
-    min-width:41rem;
+    min-width:40rem;
     min-height: 100vh;
     background-color: var(--whiteColor);
     border-right: .1rem solid var(--borderColor);
@@ -337,8 +337,22 @@ a{
 
 .right-side .pen{
     position: absolute;
-    bottom: 2rem;
+    bottom: 3rem;
     right: 2rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: var(--mainColor);
+    color: var(--whiteColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right-side #home{
+    cursor: pointer;
+    position: absolute;
+    bottom: 3rem;
+    left: 2rem;
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
