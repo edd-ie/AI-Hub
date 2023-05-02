@@ -157,9 +157,6 @@ export default function Aside(){
                                 </div>
                             </div>
                         </div>
-                            <button>
-                                <Link to="/">Home</Link>
-                            </button>
                     </div>
                 </div>
 
@@ -197,6 +194,15 @@ export default function Aside(){
                             edit
                         </span>
                     </i>
+                </div>
+                <div className="pen" id="home">
+                    <Link to="/">
+                        <i className="fas fa-pen">
+                            <span className="material-symbols-sharp">
+                                home
+                            </span>
+                        </i>
+                    </Link>
                 </div>
             </aside>
     )
