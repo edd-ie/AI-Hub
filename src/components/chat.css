@@ -349,7 +349,6 @@ a{
     justify-content: center;
 }
 .right-side #home{
-    cursor: pointer;
     position: absolute;
     bottom: 3rem;
     left: 2rem;
@@ -367,10 +366,10 @@ a{
 
 
 /* Content section start */
-.content{
+.content {
     position: relative;
     width: 100%;
-    background: linear-gradient(132deg, #dfd88d 0%,  #88b884 100%)
+    background: linear-gradient(132deg, #d5d88d 0%, #88b884 100%);
 }
 
 .content::before {
@@ -390,11 +389,15 @@ a{
 .content .container {
     visibility: hidden;
     opacity: 0;
-    transition: all .5s ease;
-    background: black;
+    transition: all .2s ease;
 }
 
 .content .container.active {
+    background: linear-gradient(132deg, #d5d88d 0%, #88b884 100%);
+    background: url('../images/pattern.svg');
+    width: 100%;
+    height: 100%;
+    background-size: contain;
     visibility: visible;
     opacity: 1;
 }
@@ -459,30 +462,42 @@ a{
 
 .content .container .chat-container {
     position: relative;
-    max-width: 67rem;
+    max-width: 100%;
+    height: 100%;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .content .container .chat-msg {
-    position: absolute;
+    margin-bottom: 3%;
+    position: relative;
     top: 1rem;
     background-color: var(--whiteColor);
     border-radius: 1rem;
-    width: fit-content;
+    width: 34rem;
     padding: 0.5rem 1rem;
     display: flex;
     gap: 1rem;
 }
 
-.content .container .chat-msg::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -1rem;
-    border: 1rem solid transparent;
-    border-top: 1rem solid var(--whiteColor);
+.content .container .reply{
+    margin-bottom: 3%;
+    position: relative;
+    top: 1rem;
+    background-color: var(--mainColor);
+    border-radius: 1rem;
+    width: 34rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+    gap: 1rem;
+    margin-left: 60%;
 }
+
 
 .content .container .chat-msg p {
     font-size: 1.6rem;
