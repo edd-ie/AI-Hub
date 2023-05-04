@@ -17,8 +17,8 @@ export default function Login(){
                     <ul>
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/chat">Chat</Link></li>
-                        
                         <li><Link to="/art">Art</Link></li>
+                        <li><Link to="/book">Summmary</Link></li>
                     </ul>
                     <img id="logo" src="https://img.icons8.com/ios-filled/100/null/artificial-intelligence.png" alt=""/>
                 </nav>
