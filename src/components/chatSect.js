@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
 const API_TOKEN ='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'
 
@@ -25,7 +25,7 @@ export default function Section(){
 
     }
 
-    function handleChat(e){
+    function handleChat(){
         let input = document.getElementById("chatMsg")
         let chat = input.value;
         console.log("file: chatSect.js:9 -> handleChat -> chat:", chat);
@@ -38,7 +38,7 @@ export default function Section(){
             }
         }
 
-        fetch("https://api-inference.huggingface.co/models/microsoft/DialoGPT-large",
+        fetch("https://api-inference.huggingface.co/models/facebook/blenderbot-400m-distill",
             {
                 headers: { Authorization: `Bearer ${API_TOKEN}` },
                 method: "POST",
@@ -47,7 +47,7 @@ export default function Section(){
         )
         .then(response => response.json())
         .then(data => {
-            console.log(data);
+            console.log('AI log:',data);
             console.log("file: chatSect.js:41 -> handleChat -> data:", data);
             setPastChat(data.conversation.past_user_inputs);
             setGenChat(data.conversation.generated_responses);
@@ -59,18 +59,31 @@ export default function Section(){
         input.value = ""
     }
 
+    function handleEnter(e){
+        if(e.key === "Enter"){
+            handleChat()
+        }
+    }
+
+    const [time, setTime] = useState(new Date().toLocaleTimeString());
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+        setTime(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
+        }, 1000);
+        return () => clearInterval(interval);
+    }, []);
+
     let chatLog = chatReply.map((chat, index) => {
-        console.log("file: chatSect.js:60 -> chatLog -> index:", index);
-        if (chatReply.length == 0) {return 0}
         return(
             <>
                 <div className="chat-msg reply" key={'user'+index}>
                     <p>{chat.user}</p>
-                    <span className="time">06:04 PM</span>
+                    <span className="time">{time}</span>
                 </div>
                 <div className="chat-msg" key={'ai'+index}>
                     <p>{chat.ai}</p>
-                    <span className="time">06:04 PM</span>
+                    <span className="time">{time}</span>
                 </div>
             </>
         )
@@ -129,7 +142,7 @@ export default function Section(){
                                     mood
                                 </span>
                             </i>
-                            <input type="text" placeholder="Message" id="chatMsg"/>
+                            <input type="text" placeholder="Message" id="chatMsg" onKeyDown={handleEnter}/>
                             <i className="fas fa-paperclip">
                                 <span className="material-symbols-sharp">
                                     attach_file
