@@ -49,6 +49,7 @@
 // }
 import './book.css';
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Flipbook() {
   const [summary, setSummary] = useState('');
@@ -73,15 +74,15 @@ export default function Flipbook() {
   return (
     <div id='host'>
       <div className="book-container">
+        <Link to="/"> <button id='Homebutton'></button></Link>
 
         <input id="checkbox-cover" type="checkbox" />
         <div className="book">
-          <img id="bookImg" src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fartificial-intelligence-theme-abstract-network-patterns-ai-lines-179669698.jpg&tbnid=VXoxJhx22JChuM&vet=12ahUKEwjd15nWpNv-AhUqsScCHb6ADx4QMygGegUIARDMAQ..i&imgrefurl=https%3A%2F%2Fwww.dreamstime.com%2Fphotos-images%2Fai-theme.html&docid=UMnHGkUltK5nWM&w=800&h=
-          409&q=images%20on%20ai%20themes%20and%20backgrounds&ved=2ahUKEwjd15nWpNv-AhUqsScCHb6ADx4QMygGegUIARDMAQ"></img>
+ 
           <label htmlFor="checkbox-cover" className="cover"></label>
           <div className="backcover"></div>
           <div className="page page1">
-          
+          <img id="backgroundImage"  src={require("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fillustrations%2Fnursery-rhyme-background&psig=AOvVaw25ENr6h0pFMIgfrIfW9lTN&ust=1683285149146000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCKjam__D24CFQAAAAAdAAAAABAD")}></img>
             <div id='bookForm'>
               <form onSubmit={handleSubmit}>
                 <input id="doc" type="text" name="doc" placeholder='Fulltext' />

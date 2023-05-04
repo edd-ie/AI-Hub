@@ -103,6 +103,16 @@
       text-align: center;
       font-size: 50px;
     }
+    #backgroundImage{
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      position: relative;
+      z-index: 0;
+      width:100%;
+      height:100%;
+    }
+    
 
     #summary{
       position: relative;
@@ -110,10 +120,8 @@
       height: 75%;
       padding: 50px
     }
-    #bookImg{
-        background-position: left;
-        height: 50%;
-        width:50%;
-    }
-      
-    
+      #homebutton{
+        position: relative;
+        height: 10%;
+        width:10%;
+      }
