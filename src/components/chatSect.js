@@ -1,12 +1,6 @@
 import React, {useState, useEffect} from "react";
 
 const API_TOKEN ='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'
-
-// "conversation":{
-//     "generated_responses":["","I think you're asking for a friend. I'm sure he'd appreciate it if we could get him some of your stuff, too! :D DDDP 3R3LLLZY7N5XQ"],
-// "past_user_inputs":["","To be or not to be that is the question?"]}
-
-
 export default function Section(){
     const[pastChat, setPastChat] = useState([])
     console.log("file: chatSect.js:12 -> Section -> pastChat:", pastChat.length);
