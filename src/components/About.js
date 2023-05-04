@@ -1,7 +1,9 @@
 import './about.css';
+import { Link } from 'react-router-dom';
 
 function About() {
   return (
+    
     <div>
       <h1>AI-HUB</h1>
       <div>
@@ -24,6 +26,7 @@ function About() {
            as a whole. The organization believes that advanced AI has the potential to revolutionize many fields, from healthcare to 
            education, and that it can help solve some of the world's most pressing problems.
         </p>
+        <Link to="/"> <button id='Homebutton'></button></Link>
       </div>
     </div>
   );
