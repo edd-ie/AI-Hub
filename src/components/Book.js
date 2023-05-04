@@ -3,17 +3,17 @@ import React from 'react';
 
 export default function Flipbook() {
 
-  fetch("https://api-inference.huggingface.co/models/facebook/bart-large-cnn",{
-        method: "POST",
-        headers: { Authorization: `Bearer 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` },
-        body: JSON.stringify({inputs:`${query}`}),
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log("file: ai.js:82 -> form.addEventListener -> data:", data);
+  // fetch("https://api-inference.huggingface.co/models/facebook/bart-large-cnn",{
+  //       method: "POST",
+  //       headers: { Authorization: `Bearer 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` },
+  //       body: JSON.stringify({inputs:`${query}`}),
+  //   })
+  //   .then(response => response.json())
+  //   .then(data => {
+  //       console.log("file: ai.js:82 -> form.addEventListener -> data:", data);
         
-    })
-    .catch(err => console.log(err))
+  //   })
+  //   .catch(err => console.log(err))
 
   return (
     // <div>
