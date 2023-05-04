@@ -1,39 +1,43 @@
 import './Art.css'
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 export default function Art(){
     const [art, setArt] = useState([]);
-//     useEffect(() => {
-//         fetch(`https://lexica.art/api/v1/search?q=${}`)
-//         .then((res)=>res.json()) 
-//         .then((data)=>{setArt(data)
-//     });
-// }, []);
+    const [prompt, setPrompt] = useState('')
+
 
     function searchArt(e){
         e.preventDefault();
-        let form = e.target
-        let input = form[0].value
-        console.log(input)
+        // let form = e.target
+        // let input = form[0].value
+        // console.log(input)
 
-        fetch(`https://lexica.art/api/v1/search?q=${input}`)
+        fetch(`https://lexica.art/api/v1/search?q=${prompt}`)
         .then((res)=>res.json()) 
-        .then((data)=>{})
+        .then((data)=>{setArt(data.images)})
 
-        form.reset()
+        // form.reset()
     }
 
-    
+    console.log(art);
 
   
     return(
         <div className="art">
             <form onSubmit={searchArt}>
-                <input  type="text" placeholder="Search Art"/>
-                <button onClick={e => setArt(e.target.value)}>SEARCH</button>
+                <input  type="text" placeholder="Search Art" value={prompt} onChange={e=>setPrompt(e.target.value)}/>
+                <button >SEARCH</button>
             </form>
 
+            <h5>Showing results for: {prompt}</h5>
+            <ul className='art-display'>
+                {art.map((item) => (
+                <li key={item.id}>
+                    <img src={item.src} alt={item.title} className='img-layout'/>
+                    </li>
+            ))}
+            </ul>
             
 
 
