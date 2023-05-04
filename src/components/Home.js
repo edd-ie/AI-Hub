@@ -9,7 +9,7 @@ export default function Login(){
     return(
         <main>
             <div className="container">
-                <div className="wave">
+                <div className="waveBox">
                     <img src={require("../images/bg.png")} alt=""/>
                 </div>
 
