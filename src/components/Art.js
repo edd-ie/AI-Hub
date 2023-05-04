@@ -1,4 +1,5 @@
 import './Art.css'
+import { Link } from "react-router-dom";
 import React, { useState } from 'react';
 
 export default function Art(){
@@ -38,7 +39,14 @@ export default function Art(){
                     </li>
             ))}
             </ul>
-            
+                
+                    <Link to="/">
+                        <i className="home">
+                            <span className="home-link">
+                                home
+                            </span>
+                        </i>
+                    </Link>
 
 
     
