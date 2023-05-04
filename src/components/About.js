@@ -14,6 +14,7 @@ function About() {
         </p>
         <h3>why we developed AI-HUB</h3>
         <p>
+          <img src="https://png.pngtree.com/background/20210709/original/pngtree-green-watercolor-stack-rhyme-picture-image_949171.jpg"></img>
           AI-HUB was developed to provide a conversational agent that can assist users in various tasks through natural language
            processing (NLP) and machine learning (ML) techniques. It is based on the GPT (Generative Pre-trained Transformer) 
            architecture, which is a state-of-the-art deep learning model for natural language processing. It is an AI system that
