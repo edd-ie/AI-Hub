@@ -1,0 +1,27 @@
+    
+ .art{  
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right, #93C572 70%, #C8EBB1 30%);
+    position: relative;
+    overflow: hidden;
+ }
+
+ .art input{
+    width: 30%;
+    height: 1%;
+    border: 2px solid rebeccapurple;
+    border-radius: 4px;
+    padding: 12px 20px;
+    margin:8px 0;
+    font-size: 20px;
+    
+    
+ }
+
+.art button{
+    width: 10%;
+    height: 2%;
+    border: 2px solid rebeccapurple;
+
+}

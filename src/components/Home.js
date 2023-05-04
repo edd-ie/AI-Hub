@@ -17,6 +17,7 @@ export default function Login(){
                     <ul>
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/chat">Chat</Link></li>
+                        <li><Link to="/art">Art</Link></li>
                         <li><Link to="/book">Summmary</Link></li>
                     </ul>
                     <img id="logo" src="https://img.icons8.com/ios-filled/100/null/artificial-intelligence.png" alt=""/>
@@ -53,19 +54,22 @@ export default function Login(){
                         </div>
                     </div>
                     <div className="box">
-                        
+                        <Link to="/art">
                             <div className="image">
                                 <img src={require("../images/paint.png")} alt=""/>
                             </div>
+                        </Link>
                         <div className="inner-box">
                             <h3>Art</h3>
                             <p>Generate art.</p>
                         </div>
                     </div>
                     <div className="box">
-                        <div className="image">
-                            <img src={require("../images/book.png")} alt=""/>
-                        </div>
+                        <Link to="/chat">
+                            <div className="image">
+                                <img src={require("../images/book.png")} alt=""/>
+                            </div>
+                        </Link>
                         <div className="inner-box">
                             <h3>Summmary</h3>
                             <p>Scale down large information</p>
