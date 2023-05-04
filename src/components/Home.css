@@ -14,11 +14,11 @@ main {
     overflow: hidden;
 }
 
-.wave {
+.waveBox{
     position: absolute;
-    top: 0%;
-    right: 20%;
+    right: 30%;
 }
+
 
 nav {
     width: 90%;
