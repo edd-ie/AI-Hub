@@ -73,11 +73,15 @@ export default function Flipbook() {
   return (
     <div id='host'>
       <div className="book-container">
+
         <input id="checkbox-cover" type="checkbox" />
         <div className="book">
+          <img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fartificial-intelligence-theme-abstract-network-patterns-ai-lines-179669698.jpg&tbnid=VXoxJhx22JChuM&vet=12ahUKEwjd15nWpNv-AhUqsScCHb6ADx4QMygGegUIARDMAQ..i&imgrefurl=https%3A%2F%2Fwww.dreamstime.com%2Fphotos-images%2Fai-theme.html&docid=UMnHGkUltK5nWM&w=800&h=
+          409&q=images%20on%20ai%20themes%20and%20backgrounds&ved=2ahUKEwjd15nWpNv-AhUqsScCHb6ADx4QMygGegUIARDMAQ"></img>
           <label htmlFor="checkbox-cover" className="cover"></label>
           <div className="backcover"></div>
           <div className="page page1">
+          
             <div id='bookForm'>
               <form onSubmit={handleSubmit}>
                 <input id="doc" type="text" name="doc" placeholder='Fulltext' />

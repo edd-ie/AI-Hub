@@ -58,6 +58,7 @@
         flex-direction: column;
       z-index: 1;
       transform: translateX(0%);
+      
     }
     
     #checkbox-cover:checked ~ .book .cover {
@@ -76,8 +77,13 @@
     }
 
     #bookForm form {
+      /* display: flex;
+      flex-direction: column; */
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
+     justify-content: center;
+     text-align: flex;
+     align-items: center;
     }
     #bookForm #doc{
       text-align: left;
@@ -103,6 +109,11 @@
       margin-top: 8%;
       height: 75%;
       padding: 50px
+    }
+    img{
+        background-position: left;
+        height: 50%;
+        width:50%;
     }
       
     
