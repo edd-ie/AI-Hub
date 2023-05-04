@@ -4,24 +4,53 @@
     width: 100%;
     background: linear-gradient(to right, #93C572 70%, #C8EBB1 30%);
     position: relative;
-    overflow: hidden;
+    overflow: scroll;
  }
 
- .art input{
+ form{
+    padding:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.art input{
     width: 30%;
     height: 1%;
-    border: 2px solid rebeccapurple;
-    border-radius: 4px;
-    padding: 12px 20px;
-    margin:8px 0;
-    font-size: 20px;
+    border-radius: 8px 0 0 8px;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    border: none;
     
-    
- }
+}
 
 .art button{
-    width: 10%;
-    height: 2%;
-    border: 2px solid rebeccapurple;
+    padding: 10px 20px;
+    border-radius: 0 8px 8px 0;
+    background-color: greenyellow;
+    border:none;
+}
 
+.art .art-display{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.img-layout{
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+h5{
+    font-size: 16px;
+    text-align: center;
+    margin: 15px;
 }
