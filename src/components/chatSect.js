@@ -61,7 +61,7 @@ export default function Section(){
 
     let chatLog = chatReply.map((chat, index) => {
         console.log("file: chatSect.js:60 -> chatLog -> index:", index);
-        if (chatReply.length == 0) {return 0}
+        if (chatReply.length === 0) {return 0}
         return(
             <>
                 <div className="chat-msg reply" key={'user'+index}>
