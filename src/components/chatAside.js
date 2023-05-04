@@ -1,16 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from "react-router-dom";
 
 
 export default function Aside(){
-    // const [time, setTime] = useState(new Date().toLocaleTimeString());
-
-    // useEffect(() => {
-    //     const interval = setInterval(() => {
-    //     setTime(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
-    //     }, 1000);
-    //     return () => clearInterval(interval);
-    // }, []);
  
     function handleBack(){  
         let header = document.querySelector('.header');      
