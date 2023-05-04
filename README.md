@@ -71,12 +71,18 @@ style="border-radius:10px;"/>
 ### <a id="art">Art</a>
 
 The art generation is handled by the lexica ai art model which uses stable diffusion to transform use input data to art in various art style
+<img src="./src/images/artPage.png" 
+alt="App screenshot"
+style="border-radius:10px;"/>
 
 ### <a id="summary">Text summarization</a>
 
 Summary a large amount of information into comprehensible chunks with one click.
 
 This works but utilizing the `facebook bart-large-cnn` an open source Convolutional Neural Networks from hugging faces that reads to the text and tries find the key takeaways from the document saving a user time and effort.
+<img src="./src/images/summaryPage.png" 
+alt="App screenshot"
+style="border-radius:10px;"/>
 
 ## <a id="contributors">Contributors</a>
 
