@@ -99,7 +99,7 @@ export default function Aside(){
                         </div>
                         <div className="chat-box" id="msg2">
                             <div className="chat-img">
-                                <img src={require("../images/icon.jpg")} alt="show"/>
+                                <img src={require("../images/ed.png")} alt="show"/>
                             </div>
                             <div className="chat-details">
                                 <div className='chat-title'>
@@ -129,7 +129,7 @@ export default function Aside(){
                         </div>
                         <div className="chat-box" id="msg4">
                             <div className="chat-img">
-                                <img src={require("../images/icon.jpg")} alt="show"/>
+                                <img src={require("../images/Camera man cry.png")} alt="show"/>
                             </div>
                             <div className="chat-details">
                                 <div className='chat-title'>
@@ -144,7 +144,7 @@ export default function Aside(){
                         </div>
                         <div className="chat-box" id="msg5">
                             <div className="chat-img">
-                                <img src={require("../images/icon.jpg")} alt="show"/>
+                                <img src={require("../images/think.png")} alt="show"/>
                             </div>
                             <div className="chat-details">
                                 <div className='chat-title'>
@@ -182,7 +182,7 @@ export default function Aside(){
                             <h4>Laura</h4>
                         </li> 
                         <li>
-                            <img src={require("../images/icon.jpg")} alt="show"/>
+                            <img src={require("../images/Camera man cry.png")} alt="show"/>
                             <h4>Daniel</h4>
                         </li> 
                     </ul>
