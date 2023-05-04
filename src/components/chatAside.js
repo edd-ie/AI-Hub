@@ -38,13 +38,6 @@ export default function Aside(){
         files.attributes.class.value += ' active';
     }
 
-    // // Update the current time every second
-    // let currentTime = setInterval(function() {
-    // var date = new Date();
-    // var time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
-    // console.log(time);
-    // }, 1000);
-
 
     function handleChat(){
         let chatBox = document.querySelector('#chatBox');
@@ -84,7 +77,7 @@ export default function Aside(){
                     <div className="chat-list">
                         <div className="chat-box" id="msg1" onClick={handleChat}>
                             <div className="chat-img">
-                                <img src={require("../images/icon.jpg")} alt="show"/>
+                                <img onClick={()=>window.open(require("../images/icon.jpg"))} src={require("../images/icon.jpg")} alt="show"/>
                             </div>
                             <div className="chat-details">
                                 <div className='chat-title'>
@@ -99,7 +92,7 @@ export default function Aside(){
                         </div>
                         <div className="chat-box" id="msg2">
                             <div className="chat-img">
-                                <img src={require("../images/ed.png")} alt="show"/>
+                                <img onClick={()=>window.open(require("../images/ed.png"))} src={require("../images/ed.png")} alt="show"/>
                             </div>
                             <div className="chat-details">
                                 <div className='chat-title'>
@@ -114,7 +107,7 @@ export default function Aside(){
                         </div>
                         <div className="chat-box" id="msg3">
                             <div className="chat-img">
-                                <img src={require("../images/icon.jpg")} alt="show"/>
+                                <img src={require("../images/no.jpg")} onClick={()=>window.open(require("../images/no.jpg"))} alt="show"/>
                             </div>
                             <div className="chat-details">
                                 <div className='chat-title'>
@@ -129,7 +122,7 @@ export default function Aside(){
                         </div>
                         <div className="chat-box" id="msg4">
                             <div className="chat-img">
-                                <img src={require("../images/Camera man cry.png")} alt="show"/>
+                                <img src={require("../images/Camera man cry.png")} onClick={()=>window.open(require("../images/Camera man cry.png"))} alt="show"/>
                             </div>
                             <div className="chat-details">
                                 <div className='chat-title'>
@@ -144,7 +137,7 @@ export default function Aside(){
                         </div>
                         <div className="chat-box" id="msg5">
                             <div className="chat-img">
-                                <img src={require("../images/think.png")} alt="show"/>
+                                <img src={require("../images/think.png")} onClick={()=>window.open(require("../images/think.png"))} alt="show"/>
                             </div>
                             <div className="chat-details">
                                 <div className='chat-title'>
