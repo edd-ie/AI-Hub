@@ -1,6 +1,5 @@
 import './Art.css'
 import { Link } from "react-router-dom";
-
 import React, { useState } from 'react';
 
 export default function Art(){
@@ -10,15 +9,16 @@ export default function Art(){
 
     function searchArt(e){
         e.preventDefault();
-        // let form = e.target
-        // let input = form[0].value
-        // console.log(input)
+        let form = e.target
+        let input = form[0]
+        setPrompt(input.value)
+        
 
-        fetch(`https://lexica.art/api/v1/search?q=${prompt}`)
+        fetch(`https://lexica.art/api/v1/search?q=${input.value}`)
         .then((res)=>res.json()) 
         .then((data)=>{setArt(data.images)})
 
-        // form.reset()
+        form.reset()
     }
 
     console.log(art);
@@ -27,7 +27,7 @@ export default function Art(){
     return(
         <div className="art">
             <form onSubmit={searchArt}>
-                <input  type="text" placeholder="Search Art" value={prompt} onChange={e=>setPrompt(e.target.value)}/>
+                <input  type="text" placeholder="Search Art"/>
                 <button >SEARCH</button>
             </form>
 

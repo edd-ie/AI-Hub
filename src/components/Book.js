@@ -1,52 +1,3 @@
-// import './book.css';
-// import React from 'react';
-
-// export default function Flipbook() {
-
-  
-
-
-//     function handleSubmit(e){
-//         e.preventDefault();
-//         let form = e.target;
-//         fetch("https://api-inference.huggingface.co/models/facebook/bart-large-cnn",{
-//         method: "POST",
-//         headers: { Authorization: `Bearer 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` },
-//         body: JSON.stringify({inputs:`${query}`}),
-//     })
-//     .then(response => response.json())
-//     .then(data => {
-//         console.log("file: ai.js:82 -> form.addEventListener -> data:", data);
-        
-//     })
-//     .catch(err => console.log(err))
-
-//     }   
-//     return(
-//    <div id='host'> 
-//     <div className="book-container">
-//     <input id="checkbox-cover" type="checkbox"/>
-//     <div className="book">
-//      <label for="checkbox-cover" class="cover"></label>
-//      <div className="backcover"></div>
-//      <div className="page page1">
-//         <div id='bookForm'> 
-//             <form onSubmit={handleSubmit}>
-//                 <input id="doc" type="text" name="name" placeholder='Fulltext'/>
-//                 <input type="submit" value="Summarize" id="summarySub"/>
-                
-//             </form>
-//         </div>
-//         <div id='summary'>
-//           <p></p>
-//         </div>
-//      </div>
-//   </div>
-// </div>
-//    </div>
-
-//   );
-// }
 import './book.css';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -82,7 +33,7 @@ export default function Flipbook() {
           <label htmlFor="checkbox-cover" className="cover"></label>
           <div className="backcover"></div>
           <div className="page page1">
-          <img id="backgroundImage"  src={require("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fillustrations%2Fnursery-rhyme-background&psig=AOvVaw25ENr6h0pFMIgfrIfW9lTN&ust=1683285149146000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCKjam__D24CFQAAAAAdAAAAABAD")}></img>
+          <img id="backgroundImage" alt=''  src={require("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fillustrations%2Fnursery-rhyme-background&psig=AOvVaw25ENr6h0pFMIgfrIfW9lTN&ust=1683285149146000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCKjam__D24CFQAAAAAdAAAAABAD")}></img>
             <div id='bookForm'>
               <form onSubmit={handleSubmit}>
                 <input id="doc" type="text" name="doc" placeholder='Fulltext' />
