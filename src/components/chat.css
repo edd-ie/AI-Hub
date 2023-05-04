@@ -513,9 +513,9 @@ a{
 }
 
 .content .container .message-box {
-    position: fixed;
-    top: 62rem;
-    left: 65%;
+    position: absolute;
+    top: 85%;
+    left: 50%;
     transform: translateX(-50%);
     display: flex;
     align-items: center;

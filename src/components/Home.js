@@ -65,9 +65,11 @@ export default function Login(){
                         </div>
                     </div>
                     <div className="box">
-                        <div className="image">
-                            <img src={require("../images/book.png")} alt=""/>
-                        </div>
+                        <Link to="/chat">
+                            <div className="image">
+                                <img src={require("../images/book.png")} alt=""/>
+                            </div>
+                        </Link>
                         <div className="inner-box">
                             <h3>Summmary</h3>
                             <p>Scale down large information</p>
