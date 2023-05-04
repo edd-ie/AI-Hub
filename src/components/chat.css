@@ -463,14 +463,17 @@ a{
 .content .container .chat-container {
     position: relative;
     max-width: 100%;
-    height: 100%;
+    height: 80vh;
     margin-left: auto;
     margin-right: auto;
     padding-left: 30px;
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
-    overflow-x: hidden;
+}
+
+::-webkit-scrollbar{
+    background: transparent;
 }
 
 .content .container .chat-msg {
@@ -510,9 +513,9 @@ a{
 }
 
 .content .container .message-box {
-    position: absolute;
-    bottom: 4rem;
-    left: 50%;
+    position: fixed;
+    top: 62rem;
+    left: 65%;
     transform: translateX(-50%);
     display: flex;
     align-items: center;
