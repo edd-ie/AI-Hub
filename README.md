@@ -1,4 +1,4 @@
-# AI HUB
+# [AI HUB](https://ai-hub-1.vercel.app/)
 
 The convergence of various artificial intelligence models & capabilities.
 
@@ -20,7 +20,7 @@ The project can be accessed in 2 ways:
 
 ### 1. Website
 
-You can access the site here -
+You can access the site here - [AI Hub](https://ai-hub-1.vercel.app/)
 
 ### 2. Cloning
 
