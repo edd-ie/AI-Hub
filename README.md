@@ -8,9 +8,11 @@ The convergence of various artificial intelligence models & capabilities.
 2. [Usage](#Usage)
 3. [Pages](#Pages)
    - [Chat](#chat)
-   - [Sort](#sort)
-   - [New Transactions](#newT)
-4. [Sources](#Sources)
+   - [Art](#art)
+   - [Text summarization](#summary)
+4. [Contributors](#contributors)
+5. [Licenses](#license)
+6. [Sources](#Sources)
 
 ## <a id="Getting-started">Getting started</a>
 
@@ -62,21 +64,41 @@ The chat functionality uses the the `facebook/blenderbot-400m-distill` ai model 
 It was shortlisted from a list of models like `gpt2, microsoft/dialoGPT_large, PygmalionAI/pygmalion-6b` just to name a few, after a series of parameter tunning and testing it had the most consistent result and was less prone to hallucinations.
 
 The user interface it modeled afte the whatsapp chat UI to give the user the familiar feeling of having a chat with a friend.
-<img src="./src/images/homePage.png" 
+<img src="./src/images/chat.png" 
 alt="App screenshot"
 style="border-radius:10px;"/>
 
-### <a id="sort">Sort</a>
+### <a id="art">Art</a>
 
-Data sorting is handle by `Tables.js`
+The art generation is handled by the lexica ai art model which uses stable diffusion to transform use input data to art in various art style
 
-### <a id="newT">New transaction</a>
+### <a id="summary">Text summarization</a>
 
-New transactions are handle by `Form.js`
+Summary a large amount of information into comprehensible chunks with one click.
+
+This works but utilizing the `facebook bart-large-cnn` an open source Convolutional Neural Networks from hugging faces that reads to the text and tries find the key takeaways from the document saving a user time and effort.
+
+## <a id="contributors">Contributors</a>
+
+This project was a team effort from the following individuals :
+
+- [Edd.ie](https://github.com/edd-ie)
+- [Laura Paullette](https://github.com/laura-paullette)
+- [Daniel Orenge](https://github.com/dantezorenge)
+
+## <a id="license">Licenses</a>
+
+The project is licensed under the [BSD 3-Clause "New" or "Revised" License](https://github.com/highlightjs/highlight.js/blob/main/LICENSE), thus redistribution and use in source and binary forms are permitted provided that the conditions are met
 
 ## <a id="Sources">Sources</a>
 
-The application uses icons and fonts from the following sources
+The application uses open-source training data and AI models from [Hugging face](https://huggingface.co/models?pipeline_tag=conversational&sort=downloads) and [Lexica AI](https://lexica.art/) :
+
+- Conversational Natural Language Processing(NLP) - [facebook/blenderbot-400m-distill](https://huggingface.co/facebook/blenderbot-400M-distill?text=Hey+my+name+is+Julien%21+How+are+you%3F)
+- Art generation - [Stable diffusion](https://lexica.art/docs)
+- Summarization Convolutional Neural Network (CNN) - [facebook/bart-large-cnn](https://huggingface.co/facebook/bart-large-cnn)
+
+The icons and fonts are sourced from :
 
 - Fonts source - [Google Fonts](https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap)
 - Icons source - [Google Icons](https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0)

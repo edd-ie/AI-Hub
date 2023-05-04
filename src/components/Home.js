@@ -9,7 +9,7 @@ export default function Login(){
     return(
         <main>
             <div className="container">
-                <div className="wave">
+                <div className="waveBox">
                     <img src={require("../images/bg.png")} alt=""/>
                 </div>
 
@@ -65,7 +65,7 @@ export default function Login(){
                         </div>
                     </div>
                     <div className="box">
-                        <Link to="/chat">
+                        <Link to="/book">
                             <div className="image">
                                 <img src={require("../images/book.png")} alt=""/>
                             </div>
