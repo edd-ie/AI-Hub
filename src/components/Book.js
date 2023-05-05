@@ -8,7 +8,8 @@ export default function Flipbook() {
   function handleSubmit(e) {
     e.preventDefault();
     const form = e.target;
-    const query = form.elements.doc.value;
+    const query = form[0].value;
+
     fetch("https://api-inference.huggingface.co/models/facebook/bart-large-cnn", {
       method: "POST",
       headers: { Authorization: `Bearer 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` },
@@ -24,20 +25,20 @@ export default function Flipbook() {
 
   return (
     <div id='host'>
+      <Link to="/"><div id="homebutton"><span className="material-symbols-sharp">home</span></div></Link>
+      <h1 id="bookH1">Flip book</h1>
+      
       <div className="book-container">
-        <Link to="/"> <button id='Homebutton'></button></Link>
-
-        <input id="checkbox-cover" type="checkbox" />
+        <input id="checkbox-cover" type="checkbox"/>
         <div className="book">
  
           <label htmlFor="checkbox-cover" className="cover"></label>
           <div className="backcover"></div>
           <div className="page page1">
-          <img id="backgroundImage" alt=''  src={require("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fillustrations%2Fnursery-rhyme-background&psig=AOvVaw25ENr6h0pFMIgfrIfW9lTN&ust=1683285149146000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCKjam__D24CFQAAAAAdAAAAABAD")}></img>
             <div id='bookForm'>
               <form onSubmit={handleSubmit}>
-                <input id="doc" type="text" name="doc" placeholder='Fulltext' />
-                <input type="submit" value="Summarize" id="summarySub" />
+                <textarea id="doc" type="text" name="doc" placeholder='Paste your text here'/>
+                <input id="submit" type="submit" value="Submit"/>
               </form>
             </div>
             <div id='summary'>
