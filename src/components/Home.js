@@ -1,7 +1,6 @@
 import './Home.css'
 import React from 'react';
 import { Link } from "react-router-dom";
-import About from './about';
 
 export default function Login(){
 
