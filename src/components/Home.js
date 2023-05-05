@@ -1,7 +1,7 @@
 import './Home.css'
 import React from 'react';
 import { Link } from "react-router-dom";
-import About from './About';
+import About from './about';
 
 export default function Login(){
 
@@ -21,7 +21,7 @@ export default function Login(){
                         <li><Link to="/chat">Chat</Link></li>
                         <li><Link to="/art">Art</Link></li>
                         <li><Link to="/book">Summmary</Link></li>
-                        
+                        <li><Link to="/about">About</Link></li>
                     </ul>
                     <img id="logo" src="https://img.icons8.com/ios-filled/100/null/artificial-intelligence.png" alt=""/>
                 </nav>
@@ -40,7 +40,7 @@ export default function Login(){
                     <div className="main-text">
                         <h1>AI HUB</h1>
                         <p>The convergence of various artificial intelligence models & capabilities.</p>
-                        <Link to="/about"> <button>Know More</button></Link>
+                        <Link to="/about"><button>Know More</button></Link>
                     </div>
                 </div>
 
