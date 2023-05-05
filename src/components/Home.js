@@ -1,6 +1,7 @@
 import './Home.css'
 import React from 'react';
 import { Link } from "react-router-dom";
+import About from './about';
 
 export default function Login(){
 
@@ -9,6 +10,7 @@ export default function Login(){
     return(
         <main>
             <div className="container">
+             
                 <div className="waveBox">
                     <img src={require("../images/bg.png")} alt=""/>
                 </div>

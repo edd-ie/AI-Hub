@@ -4,8 +4,7 @@ import Home from './components/Home'
 import Chat from './components/Chat'
 import Art from './components/Art'
 import Book from './components/Book'
-import About from './components/about'
-
+import About from'./components/about'
 function App() {
   return (
     <BrowserRouter>
