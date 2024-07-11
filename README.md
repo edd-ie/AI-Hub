@@ -1,6 +1,6 @@
 # [AI HUB](https://ai-hub-1.vercel.app/)
 
-The convergence of various artificial intelligence models & capabilities.
+The convergence of various AI models & capabilities.
 
 ## Table of Contents
 
